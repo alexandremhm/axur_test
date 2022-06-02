@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const Controller = require('../controllers/contact-controller');
 
-router.post('/contact/create-list', Controller.updateContactList);
+router.get('/contact/domain-list', Controller.getDomainsList);
 
 module.exports = router;

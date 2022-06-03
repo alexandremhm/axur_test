@@ -7,7 +7,7 @@ const createList = async () => {
 
   const name = `matheus.alexandre.${time}`;
 
-  const endpoint = `https://api.hubapi.com/contacts/v1/lists?hapikey=eu1-e8c6-8d75-4b29-ae2c-0a6538ffab9e`
+  const endpoint = `https://api.hubapi.com/contacts/v1/lists?hapikey=${TOKEN}`;
 
   try {
     const { data } = await axios.post(endpoint, { name });

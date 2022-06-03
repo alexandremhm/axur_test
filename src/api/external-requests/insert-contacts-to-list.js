@@ -1,11 +1,14 @@
 const axios = require('axios');
+const { writeEnvFile } = require('../../helpers/write-env');
 
-const { TOKEN, LISTID } = process.env;
+const { TOKEN } = process.env;
 
-const addContactsToList = async (list) => {
+const addContactsToList = async (list, listId) => {
   const formatedList = list.contacts.map(({ vid }) => vid);
 
-  const endpoint = `https://api.hubapi.com/contacts/v1/lists/${LISTID}/add?hapikey=eu1-e8c6-8d75-4b29-ae2c-0a6538ffab9e`;
+  writeEnvFile(listId);
+
+  const endpoint = `https://api.hubapi.com/contacts/v1/lists/${listId}/add?hapikey=${TOKEN}`;
 
   try {
     const response = await axios.post(endpoint, { vids: formatedList });

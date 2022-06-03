@@ -15,7 +15,9 @@ const app = express();
 app.use(express.json());
 app.use(cors());
 
-const csvFilePath = '/home/matheus-alexandre/desafios_tecnicos/axur_test/src/Contatos.csv';
+const { CSVPATH } = process.env;
+
+const csvFilePath = CSVPATH;
 
 readCSV(csvFilePath)
   .then((response) => formatContactList(response))

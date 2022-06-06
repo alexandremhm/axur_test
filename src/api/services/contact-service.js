@@ -3,11 +3,10 @@ const { getAllContactsFromList } = require('../external-requests/get-all-contact
 
 const getDomainsList = async () => {
   const { LISTID } = process.env;
-  console.log(process.env, 'GETDOMAINSLIST');
+
   const contactsList = await getAllContactsFromList(LISTID);
-  console.log(contactsList.length, 'contactsList');
+
   const domainsList = createListOfDomains(contactsList);
-  console.log(domainsList, 'domainsList');
 
   return domainsList;
 };

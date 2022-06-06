@@ -76,6 +76,7 @@ Se acaso algum erro ocorrer na requisição, o status `500` será retornado com 
 [Nodemon](https://www.npmjs.com/package/nodemon)
 [Axios](https://axios-http.com/docs/intro)
 [Async](https://www.npmjs.com/package/async)
+[ESLint](https://eslint.org/docs/rules/)
 
 ## Desafios durante a implementação
 

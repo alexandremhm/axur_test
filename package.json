@@ -13,20 +13,19 @@
     "url": "git+https://github.com/alexandremhm/axur_test.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Matheus Alexandre",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alexandremhm/axur_test/issues"
   },
   "homepage": "https://github.com/alexandremhm/axur_test#readme",
   "dependencies": {
+    "async": "^3.2.3",
     "axios": "^0.26.0",
     "cors": "^2.8.5",
     "csvtojson": "^2.0.10",
-    "dotenv": "^16.0.0",
-    "express": "^4.17.3",
-    "joi": "^17.6.0",
-    "jsonwebtoken": "^8.5.1"
+    "dotenv": "^16.0.1",
+    "express": "^4.17.3"
   },
   "devDependencies": {
     "eslint": "^8.16.0",

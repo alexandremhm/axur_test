@@ -1,16 +1,20 @@
-const csvFilePath = '/home/matheus-alexandre/desafios_tecnicos/axur_test/src/Contatos.csv';
-
 const csv = require('csvtojson');
 
-const readCSV = async () => {
+const readCSV = async (csvFilePath) => {
   try {
     const data = await csv().fromFile(csvFilePath);
-    return data;
+    const response = data.map((contact) => ({
+      firstName: contact.first_name,
+      lastName: contact.last_name,
+      email: contact.email,
+      gender: contact.gender,
+    }));
+    return response;
   } catch {
     return 'Error reading CSV file';
   }
 };
 
-// readCSV().then((data) => console.log(data));
-
-export default readCSV;
+module.exports = {
+  readCSV,
+};

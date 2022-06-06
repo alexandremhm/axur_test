@@ -11,6 +11,7 @@ const createList = async () => {
 
   try {
     const { data } = await axios.post(endpoint, { name });
+    // eslint-disable-next-line no-console
     console.log({ listName: data.name, listId: data.listId });
     return data;
   } catch (error) {

@@ -5,7 +5,7 @@ const getDomainsList = async (_req, res) => {
     const response = await Service.getDomainsList();
     return res.status(200).json({ message: 'Lista de contatos criada com sucesso!', response });
   } catch (e) {
-    return res.status(500).json({ message: e });
+    return res.status(500).json({ message: 'Ops! Algo deu errado, tente novamente!' });
   }
 };
 
